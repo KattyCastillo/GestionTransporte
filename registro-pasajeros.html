@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Transporte</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registro-viaje.html">Registro Viaje</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Resgistro Pasajeros</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-lg" style="padding-top: 30px">
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+                <label for="validationCustom02" class="form-label">Empresa Transporte</label>
+                <select class="form-select" id="validationCustom04" disabled required>
+                    <option selected disabled value="">Seleccione</option>
+                    <option selected>Servicos de transporte Herrera</option>
+                </select>
+            </div>
+            <div class="col-md-2 ">
+                <label for="validationCustomUsername" class="form-label">Codigo</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">#</span>
+                    <input type="text" class="form-control" id="validationCustomUsername"
+                        aria-describedby="inputGroupPrepend" disabled placeholder="27" required>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">Transportista</label>
+                <input type="text" class="form-control" id="validationCustom01" disabled value="Juan David Paredes"
+                    required>
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">Sucursal</label>
+                <select class="form-select" id="validationCustom04" disabled required>
+                    <option selected disabled value="">Seleccione</option>
+                    <option selected>Dos caminos</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom03" class="form-label">Fecha</label>
+                <input type="text" class="form-control" placeholder="15/01/2022" disabled id="validationCustom03"
+                    required>
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom05" class="form-label">Origen</label>
+                <input type="text" class="form-control" id="validationCustom05" disabled placeholder="Col.Morales"
+                    required>
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom05" class="form-label">Destino</label>
+                <input type="text" class="form-control" id="validationCustom05" disabled placeholder="Col.Dos Caminos"
+                    required>
+            </div>
+        </form>
+        <br>
+        <div class="col-12">
+            <table class="table table-striped table-bordered table-hover" id="tablaarticulos">
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>Colaborardor</td>
+                        <td>Destino</td>
+                        <td style="text-align: center;">Acciones</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#</td>
+                        <td>Katty Castillo</td>
+                        <td>Col.Los Alamos 4ta calle, 14ave</td>
+                        <td style="text-align: center;"><i class="fa fa-minus-circle"
+                                style="font-size:30px;color:red"></i></td>
+                    </tr>
+                    <tr>
+                        <td>#</td>
+                        <td>Juan Jose Galindo Leon</td>
+                        <td>Col.Matamoros </td>
+                        <td style="text-align: center;"><i class="fa fa-minus-circle"
+                                style="font-size:30px;color:red"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar
+                pasajero</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Colaborador</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <label for="validationCustom03" class="form-label">Sucursal</label>
+                    <input type="text" class="form-control" placeholder="Dos Caminos" disabled id="validationCustom03"
+                        required>
+                    <br>
+                    <label for="validationCustom02" class="form-label">Colaborador</label>
+                    <select class="form-select" id="validationCustom04" required>
+                        <option selected disabled value="">Seleccione</option>
+                        <option>Jaun Carlos Pavon Fuentes</option>
+                        <option>Martha Carolina Fernades Sabillon</option>
+                    </select>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</html>
